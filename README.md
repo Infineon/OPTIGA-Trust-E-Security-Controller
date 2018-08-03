@@ -5,7 +5,7 @@ Library of Infineon's security solution [OPTIGA&trade; Trust E](https://www.infi
 
 ## Summary
 [OPTIGA&trade; Trust E](https://www.infineon.com/dgdl/Infineon-OPTIGA%20TRUST%20E%20SLS%2032AIA-DS-v01_00-EN.pdf?fileId=5546d4625e37f35a015e56cfb42f5b81) is a security solution based on a secure micrcontroller.
-Each device is shipped with a unique elliptic-curve keypair which is used for One-way authentication. OPTIGA&trade; Trust E allows for easy integration into existing PKI infrastucture.
+Each device is shipped with a unique elliptic-curve keypair which is used for One-way authentication. OPTIGA&trade; Trust E allows for easy integration into existing PKI infrastructure.
 
 
 ## Key Features and Benefits
