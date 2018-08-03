@@ -25,7 +25,7 @@ The wiring to your arduino board depends on the [evaluation board](https://www.i
 ## Installation
 
 ### Integration of Library
-Please download this repository from GitHub by clicking on the following field in the latest [release](https://github.com/Infineon/OPTIGA-Trust-E-Security-Controller/release) of this repository or directly [here](https://github.com/Infineon/DPS310-Pressure-Sensor/releases/download/V1.0.5/DPS310-Pressure-Sensor.zip):
+Please download this repository from GitHub by clicking on the following field in the latest [release](https://github.com/Infineon/OPTIGA-Trust-E-Security-Controller/releases) of this repository or directly [here](https://github.com/Infineon/OPTIGA-Trust-E-Security-Controller/archive/V1.0.0.zip):
 
 
 To install the OPTIGA&trade; Trust E library in the Arduino IDE, please go now to **Sketch** > **Include Library** > **Add .ZIP Library...** in the Arduino IDE and navigate to the downloaded .ZIP file of this repository. The library will be installed in your Arduino sketch folder in libraries and you can select as well as include this one to your project under **Sketch** > **Include Library** > **OPTIGATrustE**.
