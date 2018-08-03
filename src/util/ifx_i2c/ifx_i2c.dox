@@ -1,0 +1,66 @@
+/**
+
+@page ifx_i2c Infineon I2C Protocol Stack Library
+
+The Infineon I2C Protocol Stack library enables communication with Infineon OPTIGA Trust E products.
+The protocol stack consists of three layers that relate to the ISO OSI (Open Systems Interconnection) model: transport, data link and physical.
+Beneath is a host-specific hardware abstraction layer (HAL), which interfaces to a host's I2C driver or I2C peripheral.
+
+@note This documentation provides an informal overview of the Infineon I2C Protocol Stack.
+      For more information, please visit 
+      https://www.infineon.com/cms/en/product/productType.html?productType=5546d4624f205c9a014f64f24f736ab3
+
+@section Protocol Stack Layers
+  
+@subsection ifx_i2c_transport Transport Layer (TL)
+
+The transport layer provides a single transceiver interface to send an application protocol data unit (APDU) to a device, and to subsequently retrieve the response APDU.
+The layer is responsible for chaining, i.e., fragmenting  APDUs larger than the maximum packet size, and reassembling received packets back into APDUs.
+
+Therefore, the TL provides a single transceive function to asynchronously send an APDU and receive the respective response APDU: ifx_i2c_tl_transceive().
+
+The transport layer needs to be initialized by the higher layer using the ifx_i2c_tl_init() function.
+
+@subsection ifx_i2c_data_link Data Link Layer (DL)
+
+The data link layer provides error correction on top of the physical layer's raw transmission facility.
+
+Therefore, the DL provides two functions to asynchronously send and receive error-free data frames:
+ -# ifx_i2c_dl_send_frame()
+ -# ifx_i2c_dl_receive_frame()
+
+The data link layer needs to be initialized by the higher layer using the ifx_i2c_dl_init() function.
+ 
+@subsection ifx_i2c_physical Physical Layer (PL)
+
+The physical layer provides two functions to asynchronously send and receive raw data frames:
+ -# ifx_i2c_pl_send_frame()
+ -# ifx_i2c_pl_receive_frame()
+ 
+Internally, it accesses virtual registers on the Infineon OPTIGA Trust E device:
+ -# The DATA register is used to read from or write to the device.
+ -# The DATA_REG_LEN register holds the maximum data register length.
+ -# The I2C_STATE register provides the I2C state with regard to the features supported by the Infineon device; and whether the device is busy executing an operation or ready to return a response.
+
+The physical layer is intended to be initialized by the higher layer using the ifx_i2c_pl_init() function.
+
+@section ifx_i2c_hal Hardware Abstraction Layer (HAL)
+
+The HAL separates hardware-specific APIs and module interfaces from the platform-independent implementation of the Infineon I2C Protocol Stack Library.
+
+The nrf52-targeted HAL module can be found in @ref ifx_i2c_hal_nordic_nrf.c.
+It uses the TWI transaction manager (app_twi) to interface to the I2C hardware.
+
+In general, a proper HAL for the Infineon I2C Protocol Stack needs to implement four function sets:
+ -# To initialize the HAL module, ifx_i2c_init() needs to be implemented.
+ -# To I2C read and write from/to an I2C slave, ifx_i2c_transmit() and ifx_i2c_receive() need to be implemented.
+ -# To use platform hardware timers, ifx_timer_setup() needs to be implemented. These timers are required for the transmit/receive functions on the physical layer so that asynchronous behavior can be implemented. 
+ -# To enable logging functions to send log messages to the platform's logger, ifx_debug_log() needs to be implemented.
+
+@section Configuration
+
+The I2C library can be parameterized in ifx_i2c_config.h.
+The default configuration should already provide a reasonable starting point.
+The flags IFX_I2C_LOG_PL, IFX_I2C_LOG_DL and IFX_I2C_LOG_TL turn logging on/off for the physical, data link and transport layers.
+
+*/

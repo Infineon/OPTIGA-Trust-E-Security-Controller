@@ -1,0 +1,37 @@
+#######################################
+# Syntax Coloring Map For Wire
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+begin	KEYWORD2
+setClock	KEYWORD2
+beginTransmission	KEYWORD2
+endTransmission	KEYWORD2
+requestFrom	KEYWORD2
+onReceive	KEYWORD2
+onRequest	KEYWORD2
+getCertificate	KEYWORD2 
+getCoprocessorId	KEYWORD2 
+getSleepModeActivationDelay	KEYWORD2 
+setSleepModeActivationDelay	KEYWORD2 
+getRandom	KEYWORD2 
+setAuthScheme	KEYWORD2 
+getSignature	KEYWORD2 
+
+#######################################
+# Instances (KEYWORD2)
+#######################################
+
+OPTIGATrustE	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
