@@ -26,6 +26,7 @@ The wiring to your arduino board depends on the [evaluation board](https://www.i
 
 ### Integration of Library
 Please download this repository from GitHub by clicking on the following field in the latest [release](https://github.com/Infineon/OPTIGA-Trust-E-Security-Controller/releases) of this repository or directly [here](https://github.com/Infineon/OPTIGA-Trust-E-Security-Controller/archive/V1.0.0.zip):
+![Download Library](https://raw.githubusercontent.com/Infineon/assets/master/Pictures/DL_OPTIGA_Trust_E.jpg)
 
 
 To install the OPTIGA&trade; Trust E library in the Arduino IDE, please go now to **Sketch** > **Include Library** > **Add .ZIP Library...** in the Arduino IDE and navigate to the downloaded .ZIP file of this repository. The library will be installed in your Arduino sketch folder in libraries and you can select as well as include this one to your project under **Sketch** > **Include Library** > **OPTIGATrustE**.
