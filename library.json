@@ -1,0 +1,17 @@
+{
+    "name": "OPTIGA-Trust-E-Security-Controller",
+    "keywords": "security, sensor2go, trust, optiga, ECC256, SHA256",
+    "description": "This library provides an Interface for Infineon's Optiga™ Trust E Security Controller",
+    "repository":
+    {
+      "type": "git",
+      "url": "https://github.com/Infineon/OPTIGA-Trust-E-Security-Controller.git",
+      "branch": "master"
+    },
+    "version":"1.0.0",
+    "frameworks": "arduino",
+    "platforms": [
+        "infineonxmc",
+        "atmelavr"
+    ]
+  }

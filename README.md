@@ -1,4 +1,7 @@
 # OPTIGA&trade; Trust E
+
+[![Build Status](https://travis-ci.org/Infineon/OPTIGA-Trust-E-Security-Controller.svg?branch=master)](https://travis-ci.org/Infineon/OPTIGA-Trust-E-Security-Controller)
+
 <img src="https://github.com/Infineon/Assets/blob/master/Pictures/OPTIGA-Trust-E.png">
 
 Library of Infineon's security solution [OPTIGA&trade; Trust E](https://www.infineon.com/cms/en/product/security-smart-card-solutions/optiga-embedded-security-solutions/optiga-trust/optiga-trust-e-sls-32aia/) for Arduino.
